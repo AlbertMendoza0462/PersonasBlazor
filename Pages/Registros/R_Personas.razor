@@ -1,0 +1,67 @@
+﻿@page "/Persona"
+@page "/Persona/{PersonaID:int}"
+@inject PersonasBLL personasBLL;
+
+<EditForm Model="persona" OnValidSubmit="guardar">
+    <DataAnnotationsValidator/>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Registro de Personas</h3>
+        </div>
+        <div class="card-body">
+            <label class="form-label" for="Nombre">Nombre</label>
+            <InputText class="form-control" id="Nombre" @bind-Value="persona.Nombre"/>
+            <ValidationMessage For="@(() => persona.Nombre)"/>
+
+            <label class="form-label" for="EstaturaEnPies">Estatura En Pies</label>
+            <InputNumber class="form-control" id="EstaturaEnPies" @bind-Value="persona.EstaturaEnPies"/>
+            <ValidationMessage For="@(() => persona.EstaturaEnPies)"/>
+        </div>
+        <div class="card-footer btn-group" role="group">
+            <input type="button" class="btn btn-primary" value="Nuevo" @onclick="nuevo"/>
+            <input type="submit" class="btn btn-success" value="Guardar"/>
+            <input type="button" class="btn btn-danger" value="Eliminar" @onclick="eliminar"/>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int PersonaID { get; set; }
+    public Personas persona { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        persona = new Personas();
+
+        if (PersonaID > 0)
+        {
+            Personas personaTmp = personasBLL.Find(PersonaID);
+            if (personaTmp != null)
+                persona = personaTmp;
+        }
+    }
+
+    public void nuevo()
+    {
+        persona = new Personas();
+    }
+
+    public void guardar()
+    {
+        if(personasBLL.Save(persona))
+            nuevo();
+    }
+
+    public void eliminar()
+    {
+        if(personasBLL.Existe(persona.PersonaID))
+        {
+            if (personasBLL.Delete(persona))
+                nuevo();
+        }
+    }
+}

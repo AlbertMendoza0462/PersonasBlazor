@@ -1,0 +1,45 @@
+﻿@page "/personas"
+@inject PersonasBLL personasBLL;
+@inject NavigationManager navigationManager;
+
+<EditForm Model="personas">
+    <form>
+        <button type="button" @onclick="listar">
+            <i>Buscar</i>
+        </button>
+    </form>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th scope="col">PersonaID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Estatura</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Personas persona in personas)
+            {
+                <tr @onclick="() => redireccionar(persona.PersonaID)" style="cursor: pointer;">
+                    <td>@persona.PersonaID</td>
+                    <td>@persona.Nombre</td>
+                    <td>@persona.EstaturaEnPies</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</EditForm>
+
+@code {
+    public List<Personas>? personas { get; set; } = new List<Personas>();
+    public String criterio { get; set; }
+
+    public void listar()
+    {
+        personas = personasBLL.GetPersonas();
+    }
+
+    public void redireccionar(int id)
+    {
+        navigationManager.NavigateTo("persona/" + id);
+    }
+}
