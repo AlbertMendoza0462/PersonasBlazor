@@ -19,9 +19,9 @@
             <ValidationMessage For="@(() => persona.EstaturaEnPies)"/>
         </div>
         <div class="card-footer btn-group" role="group">
-            <input type="button" class="btn btn-primary" value="Nuevo" @onclick="nuevo"/>
-            <input type="submit" class="btn btn-success" value="Guardar"/>
-            <input type="button" class="btn btn-danger" value="Eliminar" @onclick="eliminar"/>
+            <input type="button" class="btn btn-outline-primary" value="Nuevo" @onclick="nuevo"/>
+            <input type="submit" class="btn btn-outline-success" value="Guardar"/>
+            <input type="button" class="btn btn-outline-danger" value="Eliminar" @onclick="eliminar"/>
         </div>
     </div>
 </EditForm>
@@ -52,8 +52,10 @@
 
     public void guardar()
     {
-        if(personasBLL.Save(persona))
+        if (personasBLL.Save(persona))
             nuevo();
+        else
+            Console.WriteLine("No se pudo guardar");
     }
 
     public void eliminar()
@@ -62,6 +64,12 @@
         {
             if (personasBLL.Delete(persona))
                 nuevo();
+            else
+                Console.WriteLine("No se pudo eliminar");
+        }
+        else
+        {
+            Console.WriteLine("La persona no existe");
         }
     }
 }

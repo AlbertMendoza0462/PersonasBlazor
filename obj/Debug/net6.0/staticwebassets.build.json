@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5StJA28g9ElaYykMBvpoZKK7HjlWarRwXZolHhdh+Vc=",
+  "Hash": "qfuU+Joq8PxUNuD3gDjEQS9CHvii2jgQJcXYd7ipOE0=",
   "Source": "PersonasBlazor",
   "BasePath": "_content/PersonasBlazor",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\alber\\.nuget\\packages\\blazored.toast\\3.2.2\\staticwebassets\\blazored-toast.css",
+      "SourceId": "Blazored.Toast",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\alber\\.nuget\\packages\\blazored.toast\\3.2.2\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Toast",
+      "RelativePath": "blazored-toast.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\alber\\.nuget\\packages\\blazored.toast\\3.2.2\\staticwebassets\\blazored-toast.css"
+    },
+    {
+      "Identity": "C:\\Users\\alber\\.nuget\\packages\\blazored.toast\\3.2.2\\staticwebassets\\blazored-toast.min.css",
+      "SourceId": "Blazored.Toast",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\alber\\.nuget\\packages\\blazored.toast\\3.2.2\\staticwebassets\\",
+      "BasePath": "_content/Blazored.Toast",
+      "RelativePath": "blazored-toast.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\alber\\.nuget\\packages\\blazored.toast\\3.2.2\\staticwebassets\\blazored-toast.min.css"
+    },
     {
       "Identity": "C:\\Users\\alber\\Documents\\Estudios\\Clases_Universidad\\Programacion_Aplicada_1\\Asignaciones\\Personas\\PersonasBlazor\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PersonasBlazor.styles.css",
       "SourceId": "PersonasBlazor",

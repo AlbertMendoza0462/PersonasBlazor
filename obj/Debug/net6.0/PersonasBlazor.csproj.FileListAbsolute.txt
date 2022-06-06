@@ -53,3 +53,4 @@ C:\Users\alber\Documents\Estudios\Clases_Universidad\Programacion_Aplicada_1\Asi
 C:\Users\alber\Documents\Estudios\Clases_Universidad\Programacion_Aplicada_1\Asignaciones\Personas\PersonasBlazor\obj\Debug\net6.0\PersonasBlazor.pdb
 C:\Users\alber\Documents\Estudios\Clases_Universidad\Programacion_Aplicada_1\Asignaciones\Personas\PersonasBlazor\obj\Debug\net6.0\PersonasBlazor.genruntimeconfig.cache
 C:\Users\alber\Documents\Estudios\Clases_Universidad\Programacion_Aplicada_1\Asignaciones\Personas\PersonasBlazor\obj\Debug\net6.0\ref\PersonasBlazor.dll
+C:\Users\alber\Documents\Estudios\Clases_Universidad\Programacion_Aplicada_1\Asignaciones\Personas\PersonasBlazor\bin\Debug\net6.0\Blazored.Toast.dll
